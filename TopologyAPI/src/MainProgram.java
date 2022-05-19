@@ -10,7 +10,7 @@ public class MainProgram {
         while (true) {
             int input = 0;
             Scanner scn = new Scanner(System.in);
-
+            System.out.println();
             System.out.println("1- Read a topology from a given JSON file: ");
             System.out.println("2- Write a given topology from the memory to a JSON file: ");
             System.out.println("3- Query about which topologies are currently in the memory: ");
@@ -72,7 +72,7 @@ public class MainProgram {
     }
 
     private static void QueryTopologiesMain() {
-        System.out.println("Existing topologies are :");
+        System.out.println("topologies :");
         System.out.println(handler.getTopologies());
     }
 

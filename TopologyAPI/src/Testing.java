@@ -82,6 +82,6 @@ public class Testing {
     }
     
     private static void allTests() {
-    	System.out.println(counter + "OUT OF 6 Succeeded");
+    	System.out.println(counter + " OUT OF 6 Succeeded");
     }
 }
