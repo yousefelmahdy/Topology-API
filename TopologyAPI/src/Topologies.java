@@ -20,6 +20,10 @@ public class Topologies {
     }
 
 
+    /**
+     * This function read a given JSON file and adds it to Topologies
+     * @param fileName string 
+     */
     public void readJSON(String fileName) {
         JSONParser jsonParser = new JSONParser();
         try (FileReader reader = new FileReader(fileName)) {
@@ -36,7 +40,12 @@ public class Topologies {
            // e.printStackTrace();
         }
     }
+    
 
+    /**
+     * This function write given topology in a JSON file and store it
+     * @param topologyID string
+     */
     public void writeJSON(String topologyID) {
         try (FileWriter file = new FileWriter(topologyID + ".json")) {
             file.write(topologies.get(topologyID).getJson().toJSONString());
@@ -51,10 +60,19 @@ public class Topologies {
         }
     }
 
+    /**
+     * which topologies are currently in the memory
+     * @return returning List of topologies
+     */
     public Set<String> getTopologies() {
         return topologies.keySet();
     }
 
+    /**
+     * This function deletes a given topology from memory
+     * @param topologyID string
+     * @return true or false
+     */
     public boolean deleteTopology(String topologyID) {
         if (topologies.containsKey(topologyID)) {
             topologies.remove(topologyID);
@@ -63,6 +81,11 @@ public class Topologies {
         return false;
     }
 
+    /**
+     * which devices are in a given topology
+     * @param topologyID string
+     * @return List of components
+     */
     public List<Component> queryDevices(String topologyID) {
         if (topologies.get(topologyID) == null) {
             System.out.println("Topology not found in Memory");
@@ -73,6 +96,12 @@ public class Topologies {
         return temp;
     }
 
+    /**
+     * which devices are connected to a given netlist node in a given topology
+     * @param topologyID string
+     * @param node string
+     * @return List of nodes to a given topology
+     */
     public List<Component> queryDevicesWithNetlistNode(String topologyID, String node) {
         if(topologies.get(topologyID) == null){
             System.out.println("Topology not found in Memory");

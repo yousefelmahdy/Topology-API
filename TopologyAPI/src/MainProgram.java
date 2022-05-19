@@ -3,6 +3,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // main program to run all fun
+/**
+ * Date : 19/5/2020
+ * @author yousef elmahdy
+ * Program that provide the functionality to access, manage and store device topologies.
+ */
 public class MainProgram {
 
     private static Topologies handler = new Topologies();
