@@ -2,6 +2,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// main program to run all fun
 public class MainProgram {
 
     private static Topologies handler = new Topologies();

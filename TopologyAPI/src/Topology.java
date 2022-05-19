@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Set;
 import org.json.simple.JSONObject;
 
+
+// topology contains everything like documentation
 public class Topology {
 	// VAR
     private final JSONObject json;

@@ -1,3 +1,4 @@
+// use it in structs
 public class Component {
     private final String id;
     private final String type;
